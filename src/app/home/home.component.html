@@ -1,0 +1,13 @@
+<div class="main">
+    <div>
+        <button (click)="onClick()"> {{displayMsg ? "Hide" : "Display" }} details </button>
+        <p *ngIf="displayMsg">Secret Password = "Tuna"</p>
+
+        <section>
+            <p *ngFor="let log of logs; let i = index" 
+                [ngStyle]="{backgroundColor: i > 4 ?'red' : 'white'} "
+                [ngClass]="{redFont:i > 4}"
+                >{{i.toString() +  log}}</p>
+        </section>
+    </div>    
+</div>
